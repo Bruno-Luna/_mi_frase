@@ -1,0 +1,34 @@
+main{
+    min-height: 70vh;
+}
+
+.icon-edit, .icon-delete{
+    font-size: 1.32rem;
+}
+
+.frase-titulo{
+    font-size: .98rem;
+}
+
+.frase-corpo{
+    font-size: 1.1rem;
+}
+
+a{
+    color: hsl(0, 0%, 0%);
+}
+
+.no-content{
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-clone{
+    cursor: pointer;
+}
+
+.date{
+    font-size: .74rem;
+}

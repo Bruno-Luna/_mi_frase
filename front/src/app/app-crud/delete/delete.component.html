@@ -1,0 +1,28 @@
+<main>
+  <div class="content">
+      <div class="form-group">
+        <h4>Deletar frase:</h4>
+        <input type="text" [(ngModel)]="frase.author" class="form-control mb-3" id="inputAuthor" placeholder="Autor" readonly>
+        <textarea  [(ngModel)]="frase.content" class="form-control" id="inputPhrase" rows="3" placeholder="Frase" readonly></textarea>
+      </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-secondary" [routerLink]="['/']">Voltar</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn btn-danger" (click)="openModal(template)">Excluir</button>
+        </div> 
+      </div> 
+    </div>
+  </div>
+</main>
+
+<!-- MODAL exlusão -->
+<ng-template #template>
+  <div class="modal-body text-center">
+    <p>{{ message }}</p>
+    <button type="button" class="btn btn-secondary mr-3" (click)="voltar()">Não</button>
+    <button type="button" class="btn btn-primary" (click)="deleteFrase()">Sim</button>
+  </div>
+</ng-template>

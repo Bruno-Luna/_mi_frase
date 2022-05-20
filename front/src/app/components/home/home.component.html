@@ -1,0 +1,36 @@
+<main>
+      <div class="card-columns mx-1 my-1">
+        <div class="card p-2 border border-dark" *ngFor="let item of frases | orderBy: order : reverse ">
+            <blockquote class="blockquote mb-0 card-body" style="padding: .4rem;" >
+                <i class="fa fa-clone float-right ml-2" (click)="copiarFrase(item.content, item.author)" aria-hidden="true"></i>
+                <b class="frase-titulo">Frase:</b><i class="frase-corpo"> "{{ item.content }}"</i>
+              <footer class="blockquote-footer">
+                <small class="text-muted">
+                    Autor: <cite>{{ item.author }}</cite>
+                </small>
+              </footer>
+            </blockquote>
+            <div class="d-flex justify-content-around mt-2">
+              <a routerLink="/frases/edit/{{ item.id }}">
+                <i class="fa fa-pencil-square-o icon-edit"  aria-hidden="true"></i>
+              </a>
+              <a routerLink="/frases/delete/{{ item.id }}">
+                <i class="fa fa-trash-o icon-delete" aria-hidden="true"></i>
+              </a>
+            </div>
+            <small class="date float-right">
+              <cite>{{ dia }}/{{ mes }}/{{ ano }}</cite>
+            </small>
+          </div>  
+          
+      </div>
+    
+      <!-- SEM CONTEUDO -->
+        <div class="no-content" *ngIf="frases.length === 0">
+          <div class="card p-2 border border-dark">
+              <blockquote class="blockquote mb-0 card-body" style="padding: 1rem;">
+                <span>Sem conteúdo! 😉 </span>
+              </blockquote>
+            </div>        
+        </div>
+</main>

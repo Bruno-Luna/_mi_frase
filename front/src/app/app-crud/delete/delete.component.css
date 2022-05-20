@@ -1,0 +1,24 @@
+main{
+    height: 70vh;
+    width: 100vw;
+}
+
+main .content{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .content .form-group{
+    width: 80vw;
+}
+
+textarea{
+    resize: none;
+}
+
+input, textarea{
+    cursor: initial;
+}
